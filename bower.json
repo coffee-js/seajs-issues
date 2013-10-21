@@ -1,0 +1,27 @@
+{
+  "name": "seajs-issues",
+  "version": "0.0.1",
+  "authors": [
+    "jiyinyiyong <jiyinyiyong@gmail.com>"
+  ],
+  "description": "put SeaJS's Github issues into a page",
+  "license": "MIT",
+  "homepage": "jiyinyiyong.github.io/seajs-issues",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highlightjs": "~7.3.0",
+    "requirejs": "~2.1.9",
+    "marked": "~0.2.9",
+    "ractive": "~0.3.7",
+    "cirru-parser": "*",
+    "cirru-to-mustache": "*",
+    "requirejs-text": "~2.0.10",
+    "markdown-css": "*"
+  }
+}
