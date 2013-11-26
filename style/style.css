@@ -41,10 +41,10 @@ body {
 
 #article {
   height: 100%;
-  flex: 3;
+  flex: 4;
   overflow: scroll;
   padding: 80px 50px;
-  box-shadow: -4px 0 10px 1px rgb(214, 207, 207);
+  box-shadow: -3px 0 12px 2px hsla(0, 0%, 55%, 0.5);
 }
 
 #article a {
