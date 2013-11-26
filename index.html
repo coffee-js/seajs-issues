@@ -8,17 +8,32 @@
   <meta name="keyword" content="seajs, javascript, api" />
   <meta name="author" content="jiyinyiyong@gmail.com" />
   <meta name="generator" content="Github API" />
-  <!-- // <script data-main="src/main" src="bower_components/requirejs/require.js"></script> -->
-  <script data-main="src/main" src="http://requirejs.org/docs/release/2.1.9/minified/require.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="http://softwaremaniacs.org/media/soft/highlight/styles/tomorrow.css">
-  <!-- <link rel="stylesheet" type="text/css" href="bower_components/highlightjs/styles/tomorrow.css"> -->
+  <script src="http://requirejs.org/docs/release/2.1.9/minified/require.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="http://softwaremaniacs.org/media/soft/highlight/styles/tomorrow-night-bright.css">
   <link rel="stylesheet" type="text/css" href="http://mrcoles.com/demo/markdown-css/markdown.css">
-  <!-- <link rel="stylesheet" type="text/css" href="bower_components/markdown-css/markdown.css"> -->
 </head>
 <body>
   <sidebar id="content-table"></sidebar>
-  <article id="article">by Jiyin Yiyong</article>
+  <article id="article">by <a href="google.com/+jiyinyiyong?rel=author">Jiyin Yiyong</a></article>
+  <script type="text/javascript">
+    require.config({
+      baseUrl: "./",
+      paths: {
+        cirru: "http://jiyinyiyong.github.io/cirru-parser/src/parser",
+        c2m: "http://jiyinyiyong.github.io/cirru-to-mustache/src/mustache",
+        marked: "//cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min",
+        Ractive: "//cdnjs.cloudflare.com/ajax/libs/ractive.js/0.3.7/ractive.min",
+        hljs: "//cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min",
+        text: "//cdnjs.cloudflare.com/ajax/libs/require-text/2.0.10/text",
+        table: "cirru/table.cr",
+        issue: "cirru/issue.cr"
+      }
+    });
+
+    require(["./src/combine"]);
+
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

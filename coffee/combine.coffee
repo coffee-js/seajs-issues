@@ -9,7 +9,7 @@ http =
 
 getIssue = (number) ->
   "https://api.github.com/repos/seajs/seajs/issues/#{number}"
-  # "mock/#{number}"
+  "mock/#{number}"
 
 issueIds = [240, 242, 258, 259, 260, 262, 538]
 
@@ -17,7 +17,7 @@ q = (query) ->
   document.querySelector query
 
 define (require) ->
-  hljs = require "hljs"
+  require "hljs"
   Ractive = require "Ractive"
   c2m = require "c2m"
   cirru = require "cirru"
@@ -27,7 +27,7 @@ define (require) ->
   marked.setOptions
     highlight: (code, lang) ->
       if hljs?
-        hljs.highlight(lang, code).value
+        hljs.highlightAuto(code).value
       else
         code
     gfm: yes
@@ -44,6 +44,10 @@ define (require) ->
     template: tableTmpl
     data:
       list: []
+      keypath: undefined
+      renderCursor: (keypath, num) ->
+        if keypath is "list.#{num}" then "pointing" else ""
+
 
   issueIds.map (id) ->
     http.get (getIssue id), (data) ->
@@ -59,6 +63,7 @@ define (require) ->
   table.on
     load: (event) ->
       data = event.context
+      table.set "keypath", event.keypath
       issue.set "html_url", data.html_url
       issue.set "title", data.title
       issue.set "updated_at", data.updated_at
