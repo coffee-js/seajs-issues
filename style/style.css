@@ -44,7 +44,8 @@ body {
   flex: 4;
   overflow: scroll;
   padding: 80px 50px;
-  box-shadow: -3px 0 12px 2px hsla(0, 0%, 55%, 0.5);
+  box-shadow: -3px 0 12px 4px hsla(0, 0%, 0%, 0.29);
+  line-height: 30px;
 }
 
 #article a {
@@ -63,11 +64,19 @@ p>code {
 }
 
 pre code {
-    font-family: Monaco, monospace;
+    font-family: Monaco, Menlo, Monospace;
     font-size: 13px;
 }
 
 .body pre code {
     margin: 0px -50px;
     padding: 15px 50px;
+}
+
+#article ol li {
+  line-height: 28px;
+}
+
+#article pre {
+  line-height: 24px;
 }

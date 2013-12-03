@@ -9,7 +9,7 @@ http =
 
 getIssue = (number) ->
   "https://api.github.com/repos/seajs/seajs/issues/#{number}"
-  "mock/#{number}"
+  # "mock/#{number}"
 
 issueIds = [240, 242, 258, 259, 260, 262, 538]
 

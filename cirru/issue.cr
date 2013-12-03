@@ -2,8 +2,11 @@
 ! $ h3 $ = {{title}}
 small
   #html_url
-    a (:href {{html_url}}) $ = Link
-  = Last updated
+    a
+      :href {{html_url}}
+      :target _blank
+      = Issue on Github
+  = last updated
   #user
     = by
     a (:href {{url}}) $ = @{{login}}

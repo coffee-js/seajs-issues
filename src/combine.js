@@ -15,8 +15,7 @@
   };
 
   getIssue = function(number) {
-    "https://api.github.com/repos/seajs/seajs/issues/" + number;
-    return "mock/" + number;
+    return "https://api.github.com/repos/seajs/seajs/issues/" + number;
   };
 
   issueIds = [240, 242, 258, 259, 260, 262, 538];
