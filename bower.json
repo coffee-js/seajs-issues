@@ -21,7 +21,6 @@
     "ractive": "~0.3.7",
     "cirru-parser": "*",
     "cirru-to-mustache": "*",
-    "requirejs-text": "~2.0.10",
-    "markdown-css": "*"
+    "requirejs-text": "~2.0.10"
   }
 }

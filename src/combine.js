@@ -15,7 +15,8 @@
   };
 
   getIssue = function(number) {
-    return "https://api.github.com/repos/seajs/seajs/issues/" + number;
+    "https://api.github.com/repos/seajs/seajs/issues/" + number;
+    return "mock/" + number;
   };
 
   issueIds = [240, 242, 258, 259, 260, 262, 538];
@@ -26,23 +27,19 @@
 
   define(function(require) {
     var Ractive, c2m, cache, cirru, issue, issueTmpl, makeTmpl, marked, table, tableTmpl;
-    require("hljs");
     Ractive = require("Ractive");
     c2m = require("c2m");
     cirru = require("cirru");
     marked = require("marked");
-    cirru.parse.compact = true;
+    require('hljs');
     marked.setOptions({
-      highlight: function(code, lang) {
-        if (typeof hljs !== "undefined" && hljs !== null) {
-          return hljs.highlightAuto(code).value;
-        } else {
-          return code;
-        }
-      },
       gfm: true,
-      breaks: true
+      breaks: true,
+      highlight: function(code, lang) {
+        return hljs.highlightAuto(code).value;
+      }
     });
+    cirru.parse.compact = true;
     makeTmpl = function(file) {
       return c2m.render(cirru.parse(file));
     };

@@ -9,7 +9,7 @@ http =
 
 getIssue = (number) ->
   "https://api.github.com/repos/seajs/seajs/issues/#{number}"
-  # "mock/#{number}"
+  "mock/#{number}"
 
 issueIds = [240, 242, 258, 259, 260, 262, 538]
 
@@ -17,21 +17,19 @@ q = (query) ->
   document.querySelector query
 
 define (require) ->
-  require "hljs"
   Ractive = require "Ractive"
   c2m = require "c2m"
   cirru = require "cirru"
   marked = require "marked"
+  require 'hljs'
 
-  cirru.parse.compact = yes
   marked.setOptions
-    highlight: (code, lang) ->
-      if hljs?
-        hljs.highlightAuto(code).value
-      else
-        code
     gfm: yes
     breaks: yes
+    highlight: (code, lang) ->
+      hljs.highlightAuto(code).value
+
+  cirru.parse.compact = yes
 
   makeTmpl = (file) ->
     c2m.render cirru.parse file
