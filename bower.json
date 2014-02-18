@@ -6,7 +6,7 @@
   ],
   "description": "put SeaJS's Github issues into a page",
   "license": "MIT",
-  "homepage": "jiyinyiyong.github.io/seajs-issues",
+  "homepage": "seajs.coffee-js.org",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,11 +16,6 @@
   ],
   "dependencies": {
     "highlightjs": "~7.3.0",
-    "requirejs": "~2.1.9",
-    "marked": "~0.2.9",
-    "ractive": "~0.3.7",
-    "cirru-parser": "*",
-    "cirru-to-mustache": "*",
-    "requirejs-text": "~2.0.10"
+    "marked": "~0.2.9"
   }
 }
